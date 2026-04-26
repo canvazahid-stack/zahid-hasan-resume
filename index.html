@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Zahid Hasan - CV</title>
+    <style>
+        /* A4 Size & Print Settings */
+        @page { 
+            size: A4; 
+            margin: 0mm; 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #d1d5db;
+            color: #1f2937;
+            line-height: 1.45;
+        }
+
+        .cv-wrap {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 12mm 16mm;
+            overflow: hidden;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2.5px solid #1e3a8a;
+            padding-bottom: 10px;
+            margin-bottom: 12px;
+        }
+        .header-text { flex: 1; padding-right: 15px; }
+        .cv-name {
+            font-size: 24pt;
+            font-weight: 800;
+            color: #1e3a8a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.1;
+        }
+        .cv-title {
+            font-size: 10pt;
+            font-weight: 700;
+            color: #2563eb;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+        .contact-info {
+            margin-top: 8px;
+            font-size: 8.5pt;
+            color: #374151;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 12px;
+        }
+        .header-photo {
+            width: 75px;
+            height: 75px;
+            border: 2px solid #1e3a8a;
+            border-radius: 4px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background: #f3f4f6;
+        }
+        .header-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* SECTIONS */
+        .section { margin-bottom: 10px; }
+        .sec-title {
+            font-size: 10pt;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #1e3a8a;
+            border-bottom: 1.5px solid #bfdbfe;
+            padding-bottom: 2px;
+            margin-bottom: 6px;
+        }
+
+        /* SUMMARY */
+        .summary {
+            font-size: 9pt;
+            text-align: justify;
+            color: #1f2937;
+        }
+
+        /* SKILLS */
+        .skills-list { font-size: 9pt; color: #1f2937; line-height: 1.5; }
+
+        /* ACHIEVEMENTS */
+        .ach-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .ach-item {
+            flex: 1;
+            text-align: center;
+            padding: 6px;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 3px;
+        }
+        .ach-num { font-size: 13pt; font-weight: 800; color: #1e3a8a; }
+        .ach-lbl { font-size: 8pt; font-weight: 600; color: #1e3a8a; margin-top: 1px; line-height: 1.2; }
+
+        /* EXPERIENCE */
+        .exp-block { margin-bottom: 8px; }
+        .exp-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px; }
+        .exp-co { font-size: 10pt; font-weight: 800; color: #1e3a8a; }
+        .exp-date { font-size: 8.5pt; font-weight: 700; color: #4b5563; }
+        .exp-role { font-size: 9.5pt; font-weight: 700; color: #2563eb; margin-bottom: 3px; }
+        .exp-ul { padding-left: 16px; list-style-type: disc; }
+        .exp-ul li { font-size: 9pt; color: #1f2937; margin-bottom: 2px; text-align: justify; }
+        .exp-ul li strong { color: #1e3a8a; font-weight: 700; }
+
+        /* EDUCATION */
+        .edu-grid { display: flex; justify-content: space-between; gap: 15px; }
+        .edu-item { flex: 1; }
+        .edu-deg { font-size: 9.5pt; font-weight: 700; color: #1f2937; }
+        .edu-inst { font-size: 8.5pt; color: #4b5563; }
+
+        /* CERTIFICATIONS */
+        .cert-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px 12px; }
+        .cert-item { font-size: 8.5pt; }
+        .cert-name { font-weight: 700; color: #1f2937; }
+        .cert-org { color: #4b5563; font-weight: 500; }
+
+        /* LANGUAGES & REFERENCE ROW */
+        .bottom-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .bottom-left { flex: 0 0 auto; }
+        .bottom-right { flex: 1; }
+        .lang-item { font-size: 9pt; margin-bottom: 1px; }
+        .lang-nm { font-weight: 700; color: #1f2937; }
+        .ref-box { font-size: 9pt; }
+        .ref-nm { font-weight: 800; color: #1e3a8a; }
+        .ref-pos { color: #4b5563; font-size: 8.5pt; }
+        .ref-em { color: #2563eb; font-size: 8.5pt; }
+
+        /* PRINT STYLES */
+        @media print {
+            body { background: #fff; padding: 0; margin: 0; }
+            .cv-wrap { 
+                box-shadow: none; 
+                padding: 12mm 16mm;
+                width: 100%; 
+                min-height: auto;
+                margin: 0;
+            }
+            .no-print { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cv-wrap">
+
+    <!-- HEADER WITH PHOTO -->
+    <div class="header">
+        <div class="header-text">
+            <div class="cv-name">Md. Zahid Hasan</div>
+            <div class="cv-title">Deputy Manager — Admin & System Development</div>
+            
+            <div class="contact-info">
+                <span>Phone: +880 1711 183 109</span>
+                <span>Email: zahidhasan1118@gmail.com</span>
+                <span>LinkedIn: linkedin.com/in/zahidhasan1118</span>
+                <span>Location: Nazipur, Naogaon, Bangladesh</span>
+            </div>
+        </div>
+        <div class="header-photo">
+            <!-- গিটহাবে ছবি আসার জন্য profile.png নামে ছবি রিপোজিটরিতে রাখতে হবে -->
+            <img src="profile.png" alt="Md. Zahid Hasan" onerror="this.parentElement.style.display='none'">
+        </div>
+    </div>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <div class="section">
+        <div class="sec-title">Professional Profile</div>
+        <div class="summary">
+            Strategic Operations and System Development leader with <strong>11+ years of expertise</strong> optimizing corporate portfolios, automating processes, and executing legal documentation. Architected custom ERP systems and web-based financial tools that eliminated 40% of manual workflows and drove operational excellence across organizations.
+        </div>
+    </div>
+
+    <!-- CORE SKILLS -->
+    <div class="section">
+        <div class="sec-title">Core Competencies</div>
+        <div class="skills-list">
+            System Architecture & Development | HTML, CSS, JavaScript | Google Apps Script | Process Automation | Advanced Excel & VBA | GitHub Deployment | AI Workflows (Claude Code) | Tally Prime | Corporate & Legal Drafting
+        </div>
+    </div>
+
+    <!-- KEY ACHIEVEMENTS -->
+    <div class="section">
+        <div class="sec-title">Key Accomplishments</div>
+        <div class="ach-grid">
+            <div class="ach-item">
+                <div class="ach-num">3+</div>
+                <div class="ach-lbl">Custom ERP Systems Deployed</div>
+            </div>
+            <div class="ach-item">
+                <div class="ach-num">40%</div>
+                <div class="ach-lbl">Manual Work Reduced via Automation</div>
+            </div>
+            <div class="ach-item">
+                <div class="ach-num">BDT 300 Cr</div>
+                <div class="ach-lbl">Portfolio Administered (Zero Discrepancy)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <div class="section">
+        <div class="sec-title">Professional Experience</div>
+
+        <div class="exp-block">
+            <div class="exp-top">
+                <div class="exp-co">Alliance Consortium Ltd.</div>
+                <span class="exp-date">Jan 2015 – Present (11 yrs)</span>
+            </div>
+            <div class="exp-role">Deputy Manager – Admin & Operations</div>
+            <ul class="exp-ul">
+                <li><strong>System Architecture:</strong> Architected and deployed web-based EduERP, Cooperative Management ERP, and a customized Smart EMI Calculator featuring automated balance tracking, real-time P&L, and dynamic PDF reporting to streamline complex databases.</li>
+                <li><strong>Legal & Compliance:</strong> Authored and validated commercial agreements, MoUs, and legal notices, ensuring 100% regulatory compliance.</li>
+                <li><strong>Financial Oversight:</strong> Administered a BDT 300 Crore commercial portfolio, maintaining zero financial discrepancies over 5 consecutive years.</li>
+                <li><strong>Operations Management:</strong> Directed end-to-end BRTA documentation, vehicle registrations, and insurance claims processing.</li>
+                <li><strong>Tech Integration:</strong> Leveraged AI workflows (Claude Code) and automation tools to accelerate administrative reporting and communication cycles.</li>
+            </ul>
+        </div>
+
+        <div class="exp-block">
+            <div class="exp-top">
+                <div class="exp-co">Achar King (E-Commerce)</div>
+                <span class="exp-date">Jan 2022 – Present (4 yrs)</span>
+            </div>
+            <div class="exp-role">Founder & Chief Executive Officer</div>
+            <ul class="exp-ul">
+                <li><strong>Business Growth:</strong> Launched and scaled an e-commerce food brand, establishing robust operational and legal frameworks for supply chain logistics.</li>
+                <li><strong>Digital Marketing:</strong> Executed data-driven Facebook marketing strategies, securing consistent month-over-month revenue growth.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+        <div class="sec-title">Education</div>
+        <div class="edu-grid">
+            <div class="edu-item">
+                <div class="edu-deg">MSS – Political Science</div>
+                <div class="edu-inst">National University · 2016</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-deg">BA – Political Science</div>
+                <div class="edu-inst">National University · 2013</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-deg">Diploma in Computer Science</div>
+                <div class="edu-inst">Shuvo Technical Institute · 2012</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+        <div class="sec-title">Certifications & Training</div>
+        <div class="cert-grid">
+            <div class="cert-item"><span class="cert-name">Claude Code 101</span> <span class="cert-org">- Anthropic · 2025</span></div>
+            <div class="cert-item"><span class="cert-name">Corporate Grooming</span> <span class="cert-org">- 10 Minute School · 2021</span></div>
+            <div class="cert-item"><span class="cert-name">Entrepreneurship & Leadership</span> <span class="cert-org">- Nijer Bolar Moto · 2022</span></div>
+            <div class="cert-item"><span class="cert-name">Facebook Marketing</span> <span class="cert-org">- 10 Minute School · 2022</span></div>
+            <div class="cert-item"><span class="cert-name">Graphic Design with PowerPoint</span> <span class="cert-org">- 10 Minute School · 2022</span></div>
+            <div class="cert-item"><span class="cert-name">Tally ERP 9 Certified</span> <span class="cert-org">- Trust Solution · 2015</span></div>
+        </div>
+    </div>
+
+    <!-- LANGUAGES & REFERENCE -->
+    <div class="section" style="margin-bottom:0;">
+        <div class="bottom-grid">
+            <div class="bottom-left">
+                <div class="sec-title" style="margin-bottom:4px;">Languages</div>
+                <div class="lang-item"><span class="lang-nm">Bengali:</span> Native</div>
+                <div class="lang-item"><span class="lang-nm">English:</span> Fluent</div>
+            </div>
+            <div class="bottom-right">
+                <div class="sec-title" style="margin-bottom:4px;">Reference</div>
+                <div class="ref-box">
+                    <div class="ref-nm">Mohammad Aminul Islam</div>
+                    <div class="ref-pos">Executive Director, Alliance Consortium Ltd.</div>
+                    <div class="ref-em">alliance.bd@gmail.com</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="no-print" style="text-align: center; margin: 20px 0;">
+    <button onclick="window.print()" style="padding: 12px 30px; background: #1e3a8a; color: #fff; border: none; border-radius: 5px; font-size: 14px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        Save as PDF (A4 Size)
+    </button>
+</div>
+
+</body>
+</html>
