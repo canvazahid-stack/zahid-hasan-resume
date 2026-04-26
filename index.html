@@ -131,10 +131,20 @@
         .edu-inst { font-size: 8.5pt; color: #4b5563; }
 
         /* CERTIFICATIONS */
-        .cert-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px 12px; }
+        .cert-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
         .cert-item { font-size: 8.5pt; }
-        .cert-name { font-weight: 700; color: #1f2937; }
-        .cert-org { color: #4b5563; font-weight: 500; }
+        .cert-name { 
+            font-weight: 700; 
+            color: #1f2937; 
+            display: block; 
+        }
+        .cert-org { 
+            color: #4b5563; 
+            font-weight: 500; 
+            display: block; 
+            margin-top: 2px;
+            font-size: 8pt;
+        }
 
         /* LANGUAGES & REFERENCE ROW */
         .bottom-grid {
@@ -169,7 +179,6 @@
 
 <div class="cv-wrap">
 
-    <!-- HEADER WITH PHOTO -->
     <div class="header">
         <div class="header-text">
             <div class="cv-name">Md. Zahid Hasan</div>
@@ -183,12 +192,10 @@
             </div>
         </div>
         <div class="header-photo">
-            <!-- গিটহাবে ছবি আসার জন্য profile.png নামে ছবি রিপোজিটরিতে রাখতে হবে -->
             <img src="profile.png" alt="Md. Zahid Hasan" onerror="this.parentElement.style.display='none'">
         </div>
     </div>
 
-    <!-- PROFESSIONAL SUMMARY -->
     <div class="section">
         <div class="sec-title">Professional Profile</div>
         <div class="summary">
@@ -196,7 +203,6 @@
         </div>
     </div>
 
-    <!-- CORE SKILLS -->
     <div class="section">
         <div class="sec-title">Core Competencies</div>
         <div class="skills-list">
@@ -204,7 +210,6 @@
         </div>
     </div>
 
-    <!-- KEY ACHIEVEMENTS -->
     <div class="section">
         <div class="sec-title">Key Accomplishments</div>
         <div class="ach-grid">
@@ -223,7 +228,6 @@
         </div>
     </div>
 
-    <!-- PROFESSIONAL EXPERIENCE -->
     <div class="section">
         <div class="sec-title">Professional Experience</div>
 
@@ -255,7 +259,6 @@
         </div>
     </div>
 
-    <!-- EDUCATION -->
     <div class="section">
         <div class="sec-title">Education</div>
         <div class="edu-grid">
@@ -274,20 +277,18 @@
         </div>
     </div>
 
-    <!-- CERTIFICATIONS -->
     <div class="section">
         <div class="sec-title">Certifications & Training</div>
         <div class="cert-grid">
-            <div class="cert-item"><span class="cert-name">Claude Code 101</span> <span class="cert-org">- Anthropic · 2025</span></div>
-            <div class="cert-item"><span class="cert-name">Corporate Grooming</span> <span class="cert-org">- 10 Minute School · 2021</span></div>
-            <div class="cert-item"><span class="cert-name">Entrepreneurship & Leadership</span> <span class="cert-org">- Nijer Bolar Moto · 2022</span></div>
-            <div class="cert-item"><span class="cert-name">Facebook Marketing</span> <span class="cert-org">- 10 Minute School · 2022</span></div>
-            <div class="cert-item"><span class="cert-name">Graphic Design with PowerPoint</span> <span class="cert-org">- 10 Minute School · 2022</span></div>
-            <div class="cert-item"><span class="cert-name">Tally ERP 9 Certified</span> <span class="cert-org">- Trust Solution · 2015</span></div>
+            <div class="cert-item"><span class="cert-name">Claude Code 101</span> <span class="cert-org">Anthropic · 2025</span></div>
+            <div class="cert-item"><span class="cert-name">Corporate Grooming</span> <span class="cert-org">10 Minute School · 2021</span></div>
+            <div class="cert-item"><span class="cert-name">Entrepreneurship & Leadership</span> <span class="cert-org">Nijer Bolar Moto · 2022</span></div>
+            <div class="cert-item"><span class="cert-name">Facebook Marketing</span> <span class="cert-org">10 Minute School · 2022</span></div>
+            <div class="cert-item"><span class="cert-name">Graphic Design with PowerPoint</span> <span class="cert-org">10 Minute School · 2022</span></div>
+            <div class="cert-item"><span class="cert-name">Tally ERP 9 Certified</span> <span class="cert-org">Trust Solution · 2015</span></div>
         </div>
     </div>
 
-    <!-- LANGUAGES & REFERENCE -->
     <div class="section" style="margin-bottom:0;">
         <div class="bottom-grid">
             <div class="bottom-left">
